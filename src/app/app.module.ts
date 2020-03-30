@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
+import { PhotosComponent } from './posts/photos/photos.component';
 
 @NgModule({
-  declarations: [AppComponent, PostsComponent],
+  declarations: [AppComponent, PostsComponent, PhotosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -8,11 +8,16 @@ import { PostsService } from './shared/posts.service';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  public posts = new Array<Post>();
-
+  public posts: Post[];
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.postsService.getPosts().subscribe(res => (this.posts = res));
+    this.postsService.getPosts().subscribe(res => {
+      this.posts = res;
+      this.posts.map(
+        (post, index) =>
+          (post.Photo = './assets/images/cat (' + index + ').jpeg')
+      );
+    });
   }
 }
