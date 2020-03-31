@@ -10,7 +10,5 @@ export class PhotosComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.source);
-  }
+  ngOnInit(): void {}
 }

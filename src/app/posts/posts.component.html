@@ -3,7 +3,7 @@
   <h2>Welcome to PhotoNGram</h2>
 
   <mat-card class="post"
-    *ngFor="let post of posts; index as i"
+    *ngFor="let post of posts$ | async"
     fx>
     <mat-card-header>
       <div mat-card-avatar
@@ -12,7 +12,6 @@
       <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
     <app-photos [source]='post.Photo'></app-photos>
-    {{post.Photo}}
     <mat-card-content>
       <p>
         {{post.body}}
