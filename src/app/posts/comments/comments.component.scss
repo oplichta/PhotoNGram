@@ -4,6 +4,12 @@
   width: 100%;
 }
 
-.example-full-width {
-  width: 100%;
+.comment-input-wrapper {
+  mat-form-field {
+    width: 80%;
+  }
+}
+
+.add-comment-btn {
+  margin-left: 15px;
 }

@@ -14,6 +14,7 @@ import { PostsComponent } from './posts/posts.component';
 import { PhotosComponent } from './posts/photos/photos.component';
 import { LikesComponent } from './posts/likes/likes.component';
 import { CommentsComponent } from './posts/comments/comments.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CommentsComponent } from './posts/comments/comments.component';
     PostsComponent,
     PhotosComponent,
     LikesComponent,
-    CommentsComponent
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +34,10 @@ import { CommentsComponent } from './posts/comments/comments.component';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
