@@ -1,0 +1,16 @@
+<div *ngFor="let comment of comments$ | async">
+  <span>{{comment.body}}</span>
+</div>
+<div class="comment-input-wrapper">
+  <mat-form-field>
+    <mat-label>Leave a comment</mat-label>
+    <input matInput
+      [(ngModel)]='comment.body'
+      placeholder="Ex. So cute..." />
+  </mat-form-field>
+  <button mat-raised-button
+    class="add-comment-btn"
+    color="primary"
+    (click)="addComment(comment)"
+    title="Click to add comment.">Add</button>
+</div>
