@@ -5,6 +5,7 @@
 }
 
 .comment-input-wrapper {
+  display: flex;
   mat-form-field {
     width: 80%;
   }

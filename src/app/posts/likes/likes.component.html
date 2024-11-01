@@ -1,12 +1,18 @@
-<button mat-raised-button
-  color="primary">LIKE</button>
-<button mat-icon-button
-  color="warn"
-  aria-label="Example icon-button with a heart icon">
-  <mat-icon>favorite</mat-icon>
-</button>
-<!-- <button mat-icon-button
-  disabled
-  aria-label="Example icon-button with a heart icon">
-  <mat-icon>favorite</mat-icon>
-</button> -->
+<div class="action-buttons">
+  <div class="left">
+      <button mat-icon-button color="warn" aria-label="Like">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button color="primary" aria-label="Comment">
+    <mat-icon>comment</mat-icon>
+  </button>
+  <button mat-icon-button color="accent" aria-label="Share">
+    <mat-icon>share</mat-icon>
+  </button>
+  </div>
+  <div class="right">
+      <button mat-icon-button color="default" aria-label="Save for later">
+    <mat-icon>bookmark</mat-icon>
+  </button>
+  </div>
+</div>
