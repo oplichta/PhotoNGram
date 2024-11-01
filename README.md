@@ -1,5 +1,11 @@
 # PhotoNGram
 
+## [https://oplichta.github.io/PhotoNGram/](https://oplichta.github.io/PhotoNGram/).
+
+Welcome to the PhotoNGram project! This application allows users to manage and view photos.
+You can view the live application [here](https://oplichta.github.io/PhotoNGram/).
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
 ## Development server

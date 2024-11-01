@@ -3,7 +3,7 @@
   <mat-card class="post" *ngFor="let post of posts$ | async">
     <mat-card-header>
       <div mat-card-avatar class="header-image"></div>
-      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-title>{{ post.title | slice:0:45 }}...</mat-card-title>
       <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
     <app-photos [source]="post.photo"></app-photos>
@@ -15,6 +15,6 @@
     <mat-card-actions>
       <app-likes></app-likes>
     </mat-card-actions>
-    <app-comments></app-comments>
+    <app-comments [postId]="post.id"></app-comments>
   </mat-card>
 </div>

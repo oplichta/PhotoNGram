@@ -12,6 +12,10 @@ export class CommentsService {
   getComments() {
     return this.http.get<Comment[]>(this.commentAPI + 'comments');
   }
+  
+  getCommentsForPost(postId: number) {
+    return this.http.get<Comment[]>(`${this.commentAPI}comments?postId=${postId}`);
+  }
 
   setComments(comment: Comment) {
     console.log(comment);

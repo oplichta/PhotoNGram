@@ -1,5 +1,11 @@
 <div *ngFor="let comment of comments$ | async">
-  <span>{{comment.body}}</span>
+  <span>{{ comment.body | slice:0:100 }}...</span>
+</div>
+<div *ngIf="!showAllComments && allComments.length > 2">
+  <button mat-button (click)="toggleComments()">Show more comments</button>
+</div>
+<div *ngIf="showAllComments && allComments.length > 2">
+  <button mat-button (click)="toggleComments()">Show fewer comments</button>
 </div>
 <div class="comment-input-wrapper">
   <mat-form-field>
@@ -11,6 +17,6 @@
   <button mat-raised-button
     class="add-comment-btn"
     color="primary"
-    (click)="addComment(comment)"
+    (click)="addComment()"
     title="Click to add comment.">Add</button>
 </div>
