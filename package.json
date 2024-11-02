@@ -1,6 +1,7 @@
 {
   "name": "photongram",
   "version": "0.0.0",
+  "homepage" : "https://github.com/oplichta/PhotoNGram",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
