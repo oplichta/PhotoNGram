@@ -43,7 +43,7 @@ export class PostsComponent implements OnInit {
     this.posts$ = this.postsService.getPosts().pipe(
       tap((response: Post[]) => {
         response.slice(0, 22).forEach((post, index) => {
-          post.photo = './PhotoNGram/images/cat(' + index + ').jpeg';
+          post.photo = './images/cat(' + index + ').jpeg';
         });
       }),
       map((response: Post[]) => response.slice(0, 22))

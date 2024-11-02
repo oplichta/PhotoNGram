@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/posts/photos/photos.component.scss"],
+  "sourcesContent": ["@media (max-width: 600px) {\n    .image {\n      max-width: 330px;\n    }\n  }"],
+  "mappings": ";AAAA,OAAA,CAAA,SAAA,EAAA;AACI,GAAA;AACE,eAAA;;;",
+  "names": []
+}

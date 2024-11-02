@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/posts/posts.component.scss"],
+  "sourcesContent": [".posts-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  margin-top: 20px;\n}\n\n.header-image {\n  width: 40px;\n  height: 40px;\n  background-image: url(\"https://material.angular.io/assets/img/examples/shiba1.jpg\");\n  background-size: cover;\n}\n\n.post {\n  width: 100%;\n  max-width: 600px;\n  margin-bottom: 20px;\n  padding: 20px;\n  border: 1px solid #ccc;\n  border-radius: 5px;\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,kBAAA;AACA,eAAA;AACA,cAAA;;AAGF,CAAA;AACE,SAAA;AACA,UAAA;AACA,oBAAA;AACA,mBAAA;;AAGF,CAAA;AACE,SAAA;AACA,aAAA;AACA,iBAAA;AACA,WAAA;AACA,UAAA,IAAA,MAAA;AACA,iBAAA;;",
+  "names": []
+}
