@@ -15,6 +15,6 @@
     <mat-card-actions>
       <app-likes></app-likes>
     </mat-card-actions>
-    <app-comments [postId]="post.id"></app-comments>
+      <app-comments [postId]="post.id" [isMobile]="isMobile" (openCommentsSheet)="openCommentsSheetHandler($event)"></app-comments>
   </mat-card>
 </div>

@@ -1,22 +1,69 @@
-<div *ngFor="let comment of comments$ | async">
-  <span>{{ comment.body | slice:0:100 }}...</span>
+@if(isBottomSheet){
+<div class="close-button-container">
+  <button
+    mat-icon-button
+    color="primary"
+    (click)="closeBottomSheet($event)"
+    aria-label="Close"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
 </div>
+}
+<div *ngFor="let comment of comments$ | async">
+  @if(isBottomSheet){
+    <div class="comment">
+      <div class="comment-header">
+        <div mat-card-avatar class="comment-header-image"></div>
+        <span class="comment-header-text">{{ comment.name | slice : 0 : 20 }}</span>
+      </div>
+      <div class="comment-body">
+          <span>{{ comment.body}}</span>
+      </div>
+    </div>
+  } @else {
+    <div class="comment">
+      <div class="comment-header">
+        <div mat-card-avatar class="comment-header-image"></div>
+        <span class="comment-header-text">{{ comment.name | slice : 0 : 20 }}</span>
+      </div>
+      <div class="comment-body">
+        @if(comment.body.length > 100){
+          <span>{{ comment.body | slice : 0 : 100 }}...</span>
+        } @else {
+          <span>{{ comment.body}}</span>
+        }
+      </div>
+    </div>
+  }
+</div>
+@if(isMobile){
+<div *ngIf="!showAllComments && allComments.length > 2">
+  <button mat-button (click)="openCommentsSheetHandler(postId)">
+    Show more comments
+  </button>
+</div>
+} @if(!isMobile &&!isBottomSheet){
 <div *ngIf="!showAllComments && allComments.length > 2">
   <button mat-button (click)="toggleComments()">Show more comments</button>
 </div>
 <div *ngIf="showAllComments && allComments.length > 2">
   <button mat-button (click)="toggleComments()">Show fewer comments</button>
 </div>
+}
+
 <div class="comment-input-wrapper">
   <mat-form-field>
     <mat-label>Leave a comment</mat-label>
-    <input matInput
-      [(ngModel)]='comment.body'
-      placeholder="Ex. So cute..." />
+    <input matInput [(ngModel)]="comment.body" placeholder="Ex. So cute..." />
   </mat-form-field>
-  <button mat-raised-button
+  <button
+    mat-raised-button
     class="add-comment-btn"
     color="primary"
     (click)="addComment()"
-    title="Click to add comment.">Add</button>
+    title="Click to add comment."
+  >
+    Add
+  </button>
 </div>

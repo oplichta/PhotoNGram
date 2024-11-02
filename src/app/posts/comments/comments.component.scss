@@ -14,3 +14,32 @@
 .add-comment-btn {
   margin-left: 15px;
 }
+
+.close-button-container {
+  display: flex;
+  justify-self: flex-end;
+  top: 10px;
+  right: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+}
+
+.comment-header-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.comment-header-text {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.comment-body {
+  font-style: italic;
+}
