@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Comment } from '../../shared/comment';
+import { Comment } from '../models/comment';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

@@ -8,8 +8,8 @@ import {
   output,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Comment } from '../../shared/comment';
-import { CommentsService } from '../shared/comments.service';
+import { Comment } from '../../shared/models/comment';
+import { CommentsService } from '../../shared/services/comments.service';
 import { map, Observable } from 'rxjs';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';

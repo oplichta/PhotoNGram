@@ -4,8 +4,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { map, Observable, take, tap } from 'rxjs';
-import { Post } from '../shared/post';
-import { PostsService } from '../shared/posts.service';
+import { Post } from '../shared/models/post';
+import { PostsService } from '../shared/services/posts.service';
 import { CommentsComponent } from './comments/comments.component';
 import { LikesComponent } from './likes/likes.component';
 import { PhotosComponent } from './photos/photos.component';
@@ -34,7 +34,6 @@ export class PostsComponent implements OnInit {
     this.breakpointObserver.observe([Breakpoints.Handset])
     .subscribe(result => {
       this.isMobile = result.matches;
-      console.log('ddddddd',this.isMobile);
     });
   }
 

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PostsComponent } from './posts/posts.component'; // Adjust the path as necessary
+import { PostsComponent } from './posts/posts.component';
 
 // Export the routes variable
 export const routes: Routes = [
-  { path: '', redirectTo: '/posts', pathMatch: 'full' }, // Redirect to posts on load
-  { path: 'posts', component: PostsComponent }, // Add Posts route
+  { path: '', redirectTo: '/posts', pathMatch: 'full' },
+  { path: 'posts', component: PostsComponent },
 ];
 
 @NgModule({

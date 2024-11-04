@@ -1,14 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LikesComponent } from './likes.component';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('LikesComponent', () => {
   let component: LikesComponent;
   let fixture: ComponentFixture<LikesComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LikesComponent ]
+      imports: [ LikesComponent ],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting()
+      ],
     })
     .compileComponents();
   }));

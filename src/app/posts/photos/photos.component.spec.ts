@@ -1,14 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PhotosComponent } from './photos.component';
 
 describe('PhotosComponent', () => {
   let component: PhotosComponent;
   let fixture: ComponentFixture<PhotosComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PhotosComponent ]
+      imports: [ PhotosComponent ]
     })
     .compileComponents();
   }));
